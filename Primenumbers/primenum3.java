@@ -12,7 +12,8 @@ public class primenum3 {
         for (int numtocheck = 2; numtocheck <= 100; numtocheck++ ){
 
             boolean isPrime = true;
-            for (int factor = 2; factor <=numtocheck/2; factor++){
+
+            for (int factor = 2; factor <= numtocheck/2; factor++){
                 if (numtocheck % factor == 0){
                     isPrime = false;
                     break;
@@ -24,7 +25,7 @@ public class primenum3 {
             }
         }
 
-        System.out.println("Prime numbers 1 to 100 are: ");   
+        System.out.println("Prime numbers 1 to 100 are: ");
         for (int numbers : primeNumbers){
             System.out.println(numbers);
         }
