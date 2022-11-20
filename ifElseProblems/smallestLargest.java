@@ -2,7 +2,7 @@ package practices.ifElseProblems;
 
 import java.util.Scanner;
 
-public class oldestYoungest {
+public class smallestLargest {
 
     static void smallest(int a, int b, int c){
         if (a < b){
