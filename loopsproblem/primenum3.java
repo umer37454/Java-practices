@@ -1,4 +1,4 @@
-package practices.Primenumbers;
+package practices.loopsproblem;
 
 //a prime number that has two facto - 1 & itself
 

@@ -1,4 +1,4 @@
-package practices.Primenumbers;
+package practices.loopsproblem;
 
 import java.util.Scanner;
 
