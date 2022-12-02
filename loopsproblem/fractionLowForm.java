@@ -2,7 +2,7 @@ package practices.loopsproblem;
 
 import java.util.Scanner;
 
-public class HCF {
+public class fractionLowForm {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -12,17 +12,20 @@ public class HCF {
         System.out.print("Enter two number 2: ");
         int b = in.nextInt();
 
-        int gcd = 0;
+        int num = a;
+        int den = b;
 
-        //can iterate loop till a or b
-        // also till both a & b
-        for (int i = 1; i <= a && i <= b; i++){
-            if (a % i == 0 && b % i ==0){
-                gcd = i;
-            }
+        while (a % b != 0){
+            int r = a % b;
+            a = b;
+            b = r;
         }
 
-        System.out.println("Gcd of two numbers is");
-        System.out.println(gcd);
+        int gcd = b;
+
+        System.out.println("GCD " + gcd);
+        System.out.println("Lowest form " + num/gcd + "/" + den/gcd);
+
     }
 }
+
