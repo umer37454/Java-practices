@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class swapnum {
 
-    static void num(int a, int b){
+    void num(int a, int b){
         int temp;
         temp = a;
         a = b;
@@ -19,7 +19,9 @@ public class swapnum {
         int a = input.nextInt();
         int b = input.nextInt();
 
-        num(a,b);
+        swapnum obj = new swapnum();
+
+        obj.num(a,b);
 
     }
 }

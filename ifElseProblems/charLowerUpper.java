@@ -13,9 +13,11 @@ public class charLowerUpper {
         System.out.println("Enter character");
         char ch = in.next().charAt(0);
         int a;
-        a = ch;
+        a = ch; //conversion of character into int
         System.out.println(a);
 
+        //  > - greater than
+        //  < - less than
         if (a >= 65 && a <= 90) {
             System.out.println("Uppercase");
         } else
