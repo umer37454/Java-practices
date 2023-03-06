@@ -9,25 +9,24 @@ public class greatestCandy {
         int extraCandies = 3;
 
         System.out.println(kidsWithCandies(candies,extraCandies));
-
     }
 
     static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> list = new ArrayList<>();
 
         for (int candy : candies) {
-            boolean test = false;
+            boolean test = true;
             for (int i : candies) {
                 if (candy + extraCandies < i) {
-                    test = true;
+                    test = false;
                     break;
                 }
             }
 
             if (test) {
-                list.add(false);
-            } else {
                 list.add(true);
+            } else {
+                list.add(false);
             }
         }
 
