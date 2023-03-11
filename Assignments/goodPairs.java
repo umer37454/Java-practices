@@ -4,7 +4,7 @@ public class goodPairs {
     public static void main(String[] args) {
         int[] nums = {1,5,2,1,1,3,4,5};
 
-        System.out.println(numIdenticalPairs(nums));
+        System.out.println("Number of good pairs " + numIdenticalPairs(nums));
     }
 
     public static int numIdenticalPairs(int[] nums) {
