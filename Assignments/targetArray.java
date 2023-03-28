@@ -21,6 +21,7 @@ public class targetArray {
         return target;
     }
 
+    //shift function
     public static void shift(int[] target, int value, int index){
         for(int i=target.length-1; i>index; i--){
             target[i] = target[i-1];
