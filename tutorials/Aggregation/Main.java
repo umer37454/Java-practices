@@ -85,5 +85,17 @@ public class Main {
 
         StateBoards<University, String> Maharashtra = new StateBoards<>(Mumbai, "#7804");
         Maharashtra.print();
+
+        StateBoards<University, String> exampleGenerics = Main.exampleGenerics();
+        exampleGenerics.print();
     }
+
+    public static StateBoards<University,String> exampleGenerics(){
+        University republicOfCalifornia = new University("Republic of California", 1);
+
+        StateBoards<University, String> california = new StateBoards<>(republicOfCalifornia, "#4036");
+        return california;
+    }
+
+    // make generic method here
 }
