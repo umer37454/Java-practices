@@ -86,8 +86,11 @@ public class Main {
         StateBoards<University, String> Maharashtra = new StateBoards<>(Mumbai, "#7804");
         Maharashtra.print();
 
-        StateBoards<University, String> exampleGenerics = Main.exampleGenerics();
+        // static method
+        StateBoards<University, String> exampleGenerics = exampleGenerics();
         exampleGenerics.print();
+
+        System.out.println(Main.<Integer, Integer>add(4, 5));
     }
 
     public static StateBoards<University,String> exampleGenerics(){
@@ -97,5 +100,14 @@ public class Main {
         return california;
     }
 
-    // make generic method here
+    public static <T extends Number,K extends Number> T add(T demo1, K demo2){
+        T sample1 = demo1;
+        K sample2 = demo2;
+
+        double result = sample1.doubleValue() + sample2.doubleValue();
+
+        return (T)Double.valueOf(result);
+    }
+
+
 }
