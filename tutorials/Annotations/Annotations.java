@@ -1,21 +1,23 @@
 package practices.tutorials.Annotations;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 @VeryImportant
 class Cat{
+    @Important
     String name;
 
     public Cat(String name){
         this.name = name;
     }
 
-    @Quick(times = 4)
-    public void sound(){
+    @Quick(times = 3)
+    @SuppressWarnings("unused") public void sound(){
         System.out.println("Meow");
     }
 
-    public void eat(){
+    @SuppressWarnings("unused") public void eat(){
         System.out.println("Ate the food");
     }
 }
@@ -43,6 +45,25 @@ public class Annotations {
                 }
             }
         }
+
+        // checking field annotations
+        for (Field fields : cat.getClass().getDeclaredFields()) {
+            if(fields.isAnnotationPresent(Important.class)){
+                System.out.println("Important present");
+            }
+
+            if(fields.isAnnotationPresent(Important.class)){
+                String name = (String) fields.get(cat);
+                System.out.println(name);
+            }
+
+            Important annotation = fields.getAnnotation(Important.class);
+
+            cat.name = annotation.name();
+            System.out.println(cat.name);
+        }
+
+        @Important @SuppressWarnings("unused") String name;
     }
 
     @SuppressWarnings("unused")
