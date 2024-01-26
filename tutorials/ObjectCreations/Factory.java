@@ -6,8 +6,14 @@ public class Factory {
         Creator creator = new Child();
         creator.someInfo();
 
+        Product productMobile = creator.product();
+        productMobile.displayInfo();
+
         Creator creator1 = new Child2();
         creator1.someInfo();
+
+        Product productLaptop = creator1.product();
+        productLaptop.displayInfo();
     }
 }
 
