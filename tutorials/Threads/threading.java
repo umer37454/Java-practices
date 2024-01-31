@@ -48,11 +48,20 @@ public class threading {
         Thread runnable1 = new Thread(new MyRunnable());
         Thread runnable2 = new Thread(new MyRunnable());
 
+        // Creating anonymous class for runnable
+        // looks like we are creating object but its not
+//        Thread runnable2 = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//            }
+//        });
+
         runnable1.start();
         runnable2.start();
 
         Counter counter = new Counter();
-        Thread t1 = new Thread(() -> counter.increment());
+        Thread t1 = new Thread(counter::increment); // only invoking a function
         Thread t2 = new Thread(() -> counter.increment());
 
         t1.start();
