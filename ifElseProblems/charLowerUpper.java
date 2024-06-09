@@ -19,9 +19,9 @@ public class charLowerUpper {
         //  > - greater than
         //  < - less than
         if (a >= 65 && a <= 90) {
-            System.out.println("Uppercase");
+            System.out.println("Uppercase Letter");
         } else
-            System.out.println("Lowercase");
+            System.out.println("Lowercase Letter");
 
     }
 }
